@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-import whatsName from '../src/cli.js';
+import { whatsName, welcome, hello } from '../src/cli.js';
 
-console.log('Welcome to the Brain Games!');
-console.log(whatsName());
+console.log(welcome());
+
+console.log(hello());
