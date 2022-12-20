@@ -1,28 +1,8 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
-import { whatsName, welcome, hello } from '../src/cli.js';
+import { welcomeAndName, helloGamer } from '../src/index.js';
+import { rulesGame, isEven } from '../src/games/brain-even.js';
 
-console.log(welcome());
-const name = whatsName();
-console.log(`Hello, ${name}`);
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
-let count = 0;
-while (count < 3) {
-  const number = Math.floor(Math.random(0, 50) * 100);
-  console.log(`Question: ${number}`);
-  const answer = readlineSync.question('Your answer: ');
-  if (count === 2) {
-    console.log(`Congratulations, ${name}!`);
-    break;
-  } else if (number % 2 === 1 && answer === 'no') {
-    console.log('Correct!');
-    count += 1;
-  } else if (number % 2 === 0 && answer === 'yes') {
-    console.log('Correct!');
-    count += 1;
-  } else {
-    console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
-    console.log(`Let's try again, ${name}`);
-    break;
-  }
-}
+const name = welcomeAndName();
+rulesGame();
+helloGamer(name);
+isEven(name);

@@ -1,7 +1,5 @@
 #!/usr/bin/env node
+import { welcomeAndName, helloGamer } from '../src/index.js';
 
-import { whatsName, welcome, hello } from '../src/cli.js';
-
-console.log(welcome());
-
-console.log(hello());
+const name = welcomeAndName();
+helloGamer(name);
