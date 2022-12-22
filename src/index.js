@@ -11,15 +11,13 @@ export const gameEngine = (gameQuestionAndAnswer, gameRule) => {
     const [question, answer] = gameQuestionAndAnswer();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (answer == userAnswer) {
-      console.log('Correct!')
-      
+    if (answer === userAnswer) {
+      console.log('Correct!');
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}!`)
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}!`);
       return;
     }
     count += 1;
   }
-  return console.log(`Congratulations, ${name}!`);
-}
-
+  console.log(`Congratulations, ${name}!`);
+};
