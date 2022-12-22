@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { welcomeAndName, helloGamer } from '../src/index.js';
+import getNameAndWelcome from '../src/cli.js';
 
-const name = welcomeAndName();
-helloGamer(name);
+getNameAndWelcome();
