@@ -26,7 +26,7 @@ const getAnswer = (question) => {
 const getQuestion = () => {
   const numb1 = getRandomNumber(1, 20);
   const numb2 = getRandomNumber(1, 20);
-  const sign = arrSigns[getRandomNumber(0, arrSigns.length - 1)];
+  const sign = arrSigns[getRandomNumber(0, arrSigns.length)];
   return `${numb1} ${sign} ${numb2}`;
 };
 

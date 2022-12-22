@@ -4,4 +4,5 @@
 
 <a href="https://codeclimate.com/github/asfiks/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/136c4789d2a039eb6bb7/maintainability" /></a>
 
-https://asciinema.org/a/ha1lpdB1PIrbrWOHwQrpomC7A #ссылка на запись (выполнение задания по brain-even) 
+<a href="https://asciinema.org/a/6GQMKEQgI1K7k9IQgRyyoZaLu">Демонстрация игры brain-even</a>
+<a href="https://asciinema.org/connect/4d7ffd3a-a61c-4f6b-bfc1-7ba02367ec99">Демонстрация игры brain-calc</a>
