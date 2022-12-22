@@ -6,7 +6,9 @@
 
 <a href="https://asciinema.org/a/6GQMKEQgI1K7k9IQgRyyoZaLu">Демонстрация игры brain-even</a>
 <br>
-<a href="https://asciinema.org/connect/4d7ffd3a-a61c-4f6b-bfc1-7ba02367ec99">Демонстрация игры brain-calc</a>
+<a href="https://asciinema.org/a/aG6xlJobfUTS91c29K1JWFrpZ">Демонстрация игры brain-calc</a>
 <br>
-<a href="https://asciinema.org/connect/4d7ffd3a-a61c-4f6b-bfc1-7ba02367ec99">Демонстрация игры brain-gcd</a>
+<a href="https://asciinema.org/a/kO3l2FXzSykfjt0JnWY8h5rXE">Демонстрация игры brain-gcd</a>
+<br>
+<a href="https://asciinema.org/a/P76vEioIwOiEMIh6U3Co6s1SM">Демонстрация игры brain-progression</a>
 
