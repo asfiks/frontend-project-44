@@ -11,12 +11,12 @@ const getAnswer = (question) => {
     if (numb1 % i === 0 && numb2 % i === 0) arrResult.push(i);
   }
   return String(arrResult[arrResult.length - 1]);
-}
+};
 
 const getQuestion = () => {
   const numb1 = getRandomNumber(3, 99);
   const numb2 = getRandomNumber(3, 99);
-    return `${numb1} ${numb2}`;
+  return `${numb1} ${numb2}`;
 };
 
 const gameQuestionAndAnswer = () => {
