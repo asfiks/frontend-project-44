@@ -1,41 +1,49 @@
-import { getRandomNumber, gameEngine } from '../index.js';
+import { getRandomNumber, controlGame } from '../index.js';
 
 const gameRule = 'What is the result of the expression?';
 
-const arrSigns = ['+', '-', '*'];
+const signs = ['+', '-', '*'];
 
-const getAnswer = (question) => {
-  const tempArr = question.split(' ');
+const getCalculation = (arrWithExpression) => {
   let result = 0;
-  switch (tempArr[1]) {
+  const numb1 = Number(arrWithExpression[0]);
+  const numb2 = Number(arrWithExpression[2]);
+  const sign = arrWithExpression[1];
+  switch (sign) {
     case '+':
-      result = Number(tempArr[0]) + Number(tempArr[2]);
+      result = numb1 + numb2;
       break;
     case '-':
-      result = Number(tempArr[0]) - Number(tempArr[2]);
+      result = numb1 - numb2;
       break;
     case '*':
-      result = Number(tempArr[0]) * Number(tempArr[2]);
+      result = numb1 * numb2;
       break;
     default:
-      break;
+      console.log('An error has occurred! Contact the game developer!');
   }
+  return result;
+};
+
+const getAnswer = (question) => {
+  const arrWithExpression = question.split(' ');
+  const result = getCalculation(arrWithExpression);
   return String(result);
 };
 
 const getQuestion = () => {
   const numb1 = getRandomNumber(1, 20);
   const numb2 = getRandomNumber(1, 20);
-  const sign = arrSigns[getRandomNumber(0, arrSigns.length)];
+  const sign = signs[getRandomNumber(0, signs.length)];
   return `${numb1} ${sign} ${numb2}`;
 };
 
-export const gameQuestionAndAnswer = () => {
+export const getQuestionAndAnswer = () => {
   const question = getQuestion();
   const answer = getAnswer(question);
   return [question, answer];
 };
 
-const startGame = () => gameEngine(gameQuestionAndAnswer, gameRule);
+const startGame = () => controlGame(getQuestionAndAnswer, gameRule);
 
 export default startGame;

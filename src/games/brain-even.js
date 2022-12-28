@@ -1,15 +1,17 @@
-import { getRandomNumber, gameEngine } from '../index.js';
+import { getRandomNumber, controlGame } from '../index.js';
 
 const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const getAnswer = (question) => (question % 2 === 0 ? 'yes' : 'no');
+const isEven  = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
-export const gameQuestionAndAnswer = () => {
+//const getAnswer = (question) => isEven(question);
+
+export const getQuestionAndAnswer = () => {
   const question = getRandomNumber(1, 100);
-  const answer = getAnswer(question);
+  const answer = isEven(question);
   return [question, answer];
 };
 
-const startGame = () => gameEngine(gameQuestionAndAnswer, gameRule);
+const startGame = () => controlGame(getQuestionAndAnswer, gameRule);
 
 export default startGame;

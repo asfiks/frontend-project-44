@@ -1,22 +1,27 @@
-import { getRandomNumber, gameEngine } from '../index.js';
+import { getRandomNumber, controlGame } from '../index.js';
 
 const gameRule = 'What number is missing in the progression?';
 
-const gameQuestionAndAnswer = () => {
-  const pace = getRandomNumber(2, 50);
-  let result = getRandomNumber(0, 50);
-  const questionArr = [];
+const getProgression = () => {
+  const step = getRandomNumber(2, 50);
+  let startNumber = getRandomNumber(0, 50);
+  const progression = [];
   for (let i = 0; i < getRandomNumber(6, 9); i += 1) {
-    questionArr.push(result);
-    result += pace;
+    progression.push(startNumber);
+    startNumber += step;
   }
-  const numberElement = getRandomNumber(0, questionArr.length);
-  const answer = questionArr[numberElement];
-  questionArr[numberElement] = '..';
-  const question = questionArr.join(' ');
+  return progression;
+};
+
+const getQuestionAndAnswer = () => {
+  const progression = getProgression();
+  const numberElement = getRandomNumber(0, progression.length);
+  const answer = progression[numberElement];
+  progression[numberElement] = '..';
+  const question = progression.join(' ');
   return [question, String(answer)];
 };
 
-const startGame = () => gameEngine(gameQuestionAndAnswer, gameRule);
+const startGame = () => controlGame(getQuestionAndAnswer, gameRule);
 
 export default startGame;

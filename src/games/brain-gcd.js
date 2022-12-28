@@ -1,16 +1,21 @@
-import { getRandomNumber, gameEngine } from '../index.js';
+import { getRandomNumber, controlGame } from '../index.js';
 
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
-const getAnswer = (question) => {
-  const tempArr = question.split(' ');
-  tempArr.sort();
-  const [numb1, numb2] = tempArr;
-  const arrResult = [];
+const getGreatestDivisor = (numb1, numb2) => {
+  const result = [];
   for (let i = 1; i <= numb1; i += 1) {
-    if (numb1 % i === 0 && numb2 % i === 0) arrResult.push(i);
+    if (numb1 % i === 0 && numb2 % i === 0) result.push(i);
   }
-  return String(arrResult[arrResult.length - 1]);
+  return result[result.length - 1];
+}
+
+const getAnswer = (question) => {
+  const numbers = question.split(' ');
+  numbers.sort();
+  const [numb1, numb2] = numbers;
+  const result = getGreatestDivisor(numb1, numb2)
+  return String(result);
 };
 
 const getQuestion = () => {
@@ -19,12 +24,12 @@ const getQuestion = () => {
   return `${numb1} ${numb2}`;
 };
 
-const gameQuestionAndAnswer = () => {
+const getQuestionAndAnswer = () => {
   const question = getQuestion();
   const answer = getAnswer(question);
   return [question, answer];
 };
 
-const startGame = () => gameEngine(gameQuestionAndAnswer, gameRule);
+const startGame = () => controlGame(getQuestionAndAnswer, gameRule);
 
 export default startGame;
