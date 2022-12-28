@@ -1,9 +1,10 @@
-import { getRandomNumber, gameEngine } from '../index.js';
+import { getRandomNumber, controlGame } from '../index.js';
 
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const getAnswer = (numb) => {
+const isPrime = (numb) => {
   let count = 0;
+  let result = false;
   for (let i = 2; i <= numb; i += 1) {
     if (count > 1) {
       break;
@@ -11,16 +12,21 @@ const getAnswer = (numb) => {
       count += 1;
     }
   }
-  if (count === 1) return 'yes';
+  if (count === 1) result = true;
+  return result;
+};
+
+const getAnswer = (numb) => {
+  if (isPrime(numb)) return 'yes';
   return 'no';
 };
 
-export const gameQuestionAndAnswer = () => {
+export const getQuestionAndAnswer = () => {
   const question = getRandomNumber(2, 30);
   const answer = getAnswer(question);
   return [question, answer];
 };
 
-const startGame = () => gameEngine(gameQuestionAndAnswer, gameRule);
+const startGame = () => controlGame(getQuestionAndAnswer, gameRule);
 
 export default startGame;
