@@ -16,20 +16,20 @@
 <br>Для работы приложения необходима библиотека "readline-sync". Установка производится командой npm ci --production.</p>
 
 <p>Демонстрация игры brain-even:</p>
-[![asciicast](https://asciinema.org/a/L8tMAcKDMTkkHN8nMKorXYcCO.svg)](https://asciinema.org/a/L8tMAcKDMTkkHN8nMKorXYcCO)
+<a href="https://asciinema.org/a/u7avToaCdEfAhvOGfZurDRc8x" target="_blank"><img src="https://asciinema.org/a/u7avToaCdEfAhvOGfZurDRc8x.svg" /></a>
 <br>
 <br>
 <p>Демонстрация игры brain-calc:</p>
-[![asciicast](https://asciinema.org/a/1UtCG7HjSXgy6qBc1UpPzxdZp.svg)](https://asciinema.org/a/1UtCG7HjSXgy6qBc1UpPzxdZp)
+<a href="https://asciinema.org/a/1UtCG7HjSXgy6qBc1UpPzxdZp" target="_blank"><img src="https://asciinema.org/a/1UtCG7HjSXgy6qBc1UpPzxdZp.svg" /></a>
 <br>
 <br>
 <p>Демонстрация игры brain-gcd:</p>
-[![asciicast](https://asciinema.org/a/STMg7qy7PIFaXNZzoWIjolXov.svg)](https://asciinema.org/a/STMg7qy7PIFaXNZzoWIjolXov)
+<a href="https://asciinema.org/a/STMg7qy7PIFaXNZzoWIjolXov" target="_blank"><img src="https://asciinema.org/a/STMg7qy7PIFaXNZzoWIjolXov.svg" /></a>
 <br>
 <br>
 <p>Демонстрация игры brain-progression:</p>
-[![asciicast](https://asciinema.org/a/E0vfkvZhC5Riw3dToJjSduknC.svg)](https://asciinema.org/a/E0vfkvZhC5Riw3dToJjSduknC)
+<a href="https://asciinema.org/a/E0vfkvZhC5Riw3dToJjSduknC" target="_blank"><img src="https://asciinema.org/a/E0vfkvZhC5Riw3dToJjSduknC.svg" /></a>
 <br>
 <br>
 <p>Демонстрация игры brain-prime</p>
-[![asciicast](https://asciinema.org/a/YpHe4TflOsZ0rDo3xfaZzbXJk.svg)](https://asciinema.org/a/YpHe4TflOsZ0rDo3xfaZzbXJk)
+<a href="https://asciinema.org/a/YpHe4TflOsZ0rDo3xfaZzbXJk" target="_blank"><img src="https://asciinema.org/a/YpHe4TflOsZ0rDo3xfaZzbXJk.svg" /></a>
