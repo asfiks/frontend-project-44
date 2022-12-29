@@ -8,21 +8,13 @@ const getGreatestDivisor = (numb1, numb2) => {
     if (numb1 % i === 0 && numb2 % i === 0) result.push(i);
   }
   return result[result.length - 1];
-<<<<<<< HEAD
 };
-=======
-}
->>>>>>> 72c442a1d0da553c63d916dab36e6a5b73f3c967
 
 const getAnswer = (question) => {
   const numbers = question.split(' ');
   numbers.sort();
   const [numb1, numb2] = numbers;
-<<<<<<< HEAD
   const result = getGreatestDivisor(numb1, numb2);
-=======
-  const result = getGreatestDivisor(numb1, numb2)
->>>>>>> 72c442a1d0da553c63d916dab36e6a5b73f3c967
   return String(result);
 };
 
