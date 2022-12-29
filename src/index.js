@@ -9,7 +9,7 @@ export const controlGame = (questionAndAnswer, gameRule) => {
   console.log(`Hello, ${name}!`);
   console.log(gameRule);
   while (round < maxRounds) {
-    const [question, answer] = questionAndAnswer;
+    const [question, answer] = questionAndAnswer();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (answer === userAnswer) {
