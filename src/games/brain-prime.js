@@ -1,4 +1,5 @@
-import { getRandomNumber, controlGame } from '../index.js';
+import controlGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -16,14 +17,10 @@ const isPrime = (numb) => {
   return result;
 };
 
-const getAnswer = (numb) => {
-  if (isPrime(numb)) return 'yes';
-  return 'no';
-};
-
 export const getQuestionAndAnswer = () => {
   const question = getRandomNumber(2, 30);
-  const answer = getAnswer(question);
+  let answer = 'no';
+  if (isPrime(question)) answer = 'yes';
   return [question, answer];
 };
 

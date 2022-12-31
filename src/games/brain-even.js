@@ -1,12 +1,14 @@
-import { getRandomNumber, controlGame } from '../index.js';
+import controlGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
+const isEven = (number) => (number % 2 === 0);
 
 export const getQuestionAndAnswer = () => {
   const question = getRandomNumber(1, 100);
-  const answer = isEven(question);
+  let answer = 'no';
+  if (isEven(question)) answer = 'yes';
   return [question, answer];
 };
 

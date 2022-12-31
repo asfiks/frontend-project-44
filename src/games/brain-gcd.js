@@ -1,4 +1,5 @@
-import { getRandomNumber, controlGame } from '../index.js';
+import controlGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
@@ -10,24 +11,12 @@ const getGreatestDivisor = (numb1, numb2) => {
   return result[result.length - 1];
 };
 
-const getAnswer = (question) => {
-  const numbers = question.split(' ');
-  numbers.sort();
-  const [numb1, numb2] = numbers;
-  const result = getGreatestDivisor(numb1, numb2);
-  return String(result);
-};
-
-const getQuestion = () => {
+const getQuestionAndAnswer = () => {
   const numb1 = getRandomNumber(3, 99);
   const numb2 = getRandomNumber(3, 99);
-  return `${numb1} ${numb2}`;
-};
-
-const getQuestionAndAnswer = () => {
-  const question = getQuestion();
-  const answer = getAnswer(question);
-  return [question, answer];
+  const question = `${numb1} ${numb2}`;
+  const answer = getGreatestDivisor(numb1, numb2);
+  return [question, String(answer)];
 };
 
 const startGame = () => controlGame(getQuestionAndAnswer, gameRule);

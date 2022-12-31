@@ -1,14 +1,12 @@
-import { getRandomNumber, controlGame } from '../index.js';
+import controlGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const gameRule = 'What is the result of the expression?';
 
 const signs = ['+', '-', '*'];
 
-const getCalculation = (arrWithExpression) => {
+const getCalculation = (numb1, numb2, sign) => {
   let result = 0;
-  const numb1 = Number(arrWithExpression[0]);
-  const numb2 = Number(arrWithExpression[2]);
-  const sign = arrWithExpression[1];
   switch (sign) {
     case '+':
       result = numb1 + numb2;
@@ -25,23 +23,13 @@ const getCalculation = (arrWithExpression) => {
   return result;
 };
 
-const getAnswer = (question) => {
-  const arrWithExpression = question.split(' ');
-  const result = getCalculation(arrWithExpression);
-  return String(result);
-};
-
-const getQuestion = () => {
+export const getQuestionAndAnswer = () => {
   const numb1 = getRandomNumber(1, 20);
   const numb2 = getRandomNumber(1, 20);
   const sign = signs[getRandomNumber(0, signs.length)];
-  return `${numb1} ${sign} ${numb2}`;
-};
-
-export const getQuestionAndAnswer = () => {
-  const question = getQuestion();
-  const answer = getAnswer(question);
-  return [question, answer];
+  const question = `${numb1} ${sign} ${numb2}`;
+  const answer = getCalculation(numb1, numb2, sign);
+  return [question, String(answer)];
 };
 
 const startGame = () => controlGame(getQuestionAndAnswer, gameRule);
